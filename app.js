@@ -3,6 +3,10 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const router = require("./routes/routes");
 const userRoute = require("./routes/user");
+
+//db connection
+const db = require("./config/key").mongoUrl;
+
 //ejs
 app.use(expressLayouts);
 app.set("view engine", "ejs");
